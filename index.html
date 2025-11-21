@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Stop–Breathe–Think</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="overlay">
+    <div class="top-bar">
+        <h1>Stop–Breathe–Think</h1>
+        <div class="top-controls">
+            <button id="soundToggle">🔈</button>
+            <button id="languageToggle">ES</button>
+        </div>
+    </div>
+
+    <div class="traffic-light">
+        <div id="red" class="light"></div>
+        <div id="yellow" class="light"></div>
+        <div id="green" class="light"></div>
+    </div>
+
+    <div class="text-display">
+        <div id="label">...</div>
+        <div id="countdown"></div>
+    </div>
+</div>
+
+<audio id="bgAudio" loop>
+    <source src="audio/calm.mp3" type="audio/mp3" />
+</audio>
+<script src="script.js"></script>
+</body>
+</html>
