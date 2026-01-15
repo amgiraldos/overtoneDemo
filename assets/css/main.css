@@ -8571,6 +8571,7 @@ body.tp-magic-cursor #magic-cursor {
   color: var(--tp-common-black);
   border: 1px solid rgba(30, 30, 30, 0.1);
 }
+
 .tp-portfolio-inner-tab-wrap nav .nav-tabs .nav-link.active, .tp-portfolio-inner-tab-wrap nav .nav-tabs .nav-link:hover {
   color: var(--tp-common-white);
   background: var(--tp-common-black);
@@ -8584,6 +8585,7 @@ body.tp-magic-cursor #magic-cursor {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 574.98px) {
   .tp-portfolio-inner-tab-style-2 nav .nav-tabs {
     flex-direction: row;

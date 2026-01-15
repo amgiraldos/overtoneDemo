@@ -64,7 +64,7 @@
 	
 	////////////////////////////////////////////////////
 	// 02. Common Js
-	$("[data-background").each(function () {
+	$("[data-background]").each(function () {
 		$(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
 	});
 
@@ -1177,31 +1177,26 @@
 
 	///////////////////////////////////////////////////
 	// 40. fade-class-active
-	if ($(".tp_fade_anim").length > 0) {
-		gsap.utils.toArray(".tp_fade_anim").forEach((item) => {
-			let tp_fade_offset = item.getAttribute("data-fade-offset") || 40,
-				tp_duration_value = item.getAttribute("data-duration") || 0.75,
-				tp_fade_direction = item.getAttribute("data-fade-from") || "bottom",
-				tp_onscroll_value = item.getAttribute("data-on-scroll") || 1,
-				tp_delay_value = item.getAttribute("data-delay") || 0.15,
-				tp_ease_value = item.getAttribute("data-ease") || "power2.out",
-				tp_anim_setting = {
-					opacity: 0,
-					ease: tp_ease_value,
-					duration: tp_duration_value,
-					delay: tp_delay_value,
-					x: (tp_fade_direction == "left" ? -tp_fade_offset : (tp_fade_direction == "right" ? tp_fade_offset : 0)),
-					y: (tp_fade_direction == "top" ? -tp_fade_offset : (tp_fade_direction == "bottom" ? tp_fade_offset : 0)),
-			    };
-			if (tp_onscroll_value == 1) {
-				tp_anim_setting.scrollTrigger = {
-					trigger: item,
-					start: 'top 85%',
-				};
-			}
-			gsap.from(item, tp_anim_setting);
-		});
-	}
+    if ($(".tp_fade_anim").length > 0) {
+        gsap.utils.toArray(".tp_fade_anim").forEach((item) => {
+            let tp_fade_offset = item.getAttribute("data-fade-offset") || 40,
+                tp_duration_value = item.getAttribute("data-duration") || 0.75,
+                tp_fade_direction = item.getAttribute("data-fade-from") || "bottom",
+                tp_delay_value = item.getAttribute("data-delay") || 0.15,
+                tp_ease_value = item.getAttribute("data-ease") || "power2.out",
+                tp_anim_setting = {
+                    opacity: 0,
+                    ease: tp_ease_value,
+                    duration: tp_duration_value,
+                    delay: tp_delay_value,
+                    x: (tp_fade_direction == "left" ? -tp_fade_offset : (tp_fade_direction == "right" ? tp_fade_offset : 0)),
+                    y: (tp_fade_direction == "top" ? -tp_fade_offset : (tp_fade_direction == "bottom" ? tp_fade_offset : 0)),
+                };
+
+            // animación sin scrollTrigger
+            gsap.from(item, tp_anim_setting);
+        });
+    }
 
 	///////////////////////////////////////////////////
 	// 41. carachter Animation
