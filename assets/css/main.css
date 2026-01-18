@@ -7703,6 +7703,9 @@ body.tp-magic-cursor #magic-cursor {
     aspect-ratio: 9 / 16; /* o 16/9 si es horizontal */
     margin-bottom: 20px;
 }
+/*img {*/
+/*    pointer-events: none;*/
+/*}*/
 
 .video-wrapper iframe {
     position: absolute;
