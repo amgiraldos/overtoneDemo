@@ -7197,6 +7197,14 @@ body.tp-magic-cursor #magic-cursor {
   text-transform: uppercase;
   color: var(--tp-common-black);
 }
+
+@media (max-width: 768px) {
+    .tp-hero-title {
+        font-size: 48px;
+        line-height: 1.1;
+    }
+}
+
 @media only screen and (min-width: 1700px) and (max-width: 1800px) {
   .tp-hero-title {
     font-size: 200px;
