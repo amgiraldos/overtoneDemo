@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 herramientas para crear mejor contenido | Overtone Lab</title>
+<meta name="description" content="Guía gratuita con 5 apps que te ayudan a crear mejor contenido y ahorrar tiempo.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph: cómo se ve al compartir el enlace en WhatsApp / redes -->
+<meta property="og:title" content="5 herramientas para crear mejor contenido">
+<meta property="og:description" content="Apps que realmente te ayudan a ser un mejor creador y ahorrar tiempo.">
+<meta property="og:image" content="https://overtonelab.com/assets/img/lead-magnet/preview.png">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   Fuentes del tema. Si tu carpeta de fuentes está en otra ruta,
+   ajusta las dos líneas de abajo. Si no existen, cae a Inter.
+   ============================================================ */
+@font-face{
+  font-family:"Sequel Sans Heavy Disp";
+  src:url("assets/fonts/SequelSans-HeavyDisp.woff2") format("woff2"),
+      url("assets/fonts/SequelSans-HeavyDisp.woff") format("woff");
+  font-weight:800; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Sequel Sans Medium Head";
+  src:url("assets/fonts/SequelSans-MediumHead.woff2") format("woff2"),
+      url("assets/fonts/SequelSans-MediumHead.woff") format("woff");
+  font-weight:500; font-style:normal; font-display:swap;
+}
+
+:root{
+  --purple:#725af6;
+  --purple-dark:#5a43d6;
+  --purple-deep:#3d2b9e;
+  --black:#1e1e1e;
+  --grey:#5e5959;
+  --grey-soft:#f3f3f3;
+  --border:rgba(30,30,30,.12);
+  --white:#fff;
+  --error:#c0392b;
+
+  --ff-display:"Sequel Sans Heavy Disp","Inter",sans-serif;
+  --ff-head:"Sequel Sans Medium Head","Inter",sans-serif;
+  --ff-body:"Inter",sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--ff-body);
+  font-size:16px;
+  line-height:1.6;
+  color:var(--black);
+  background:var(--grey-soft);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+
+/* ---------- Banner ---------- */
+.banner{
+  background:var(--purple);
+  padding:74px 24px 78px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.banner::after{
+  content:"";
+  position:absolute;left:0;right:0;bottom:0;height:4px;
+  background:linear-gradient(90deg,#a020f0 0%,#00ffd1 100%);
+}
+.banner h1{
+  font-family:var(--ff-display);
+  font-weight:800;
+  font-size:clamp(2rem,5.4vw,3.9rem);
+  line-height:1.06;
+  letter-spacing:-.02em;
+  color:var(--white);
+  max-width:16ch;
+  margin:0 auto;
+}
+.banner p{
+  font-family:var(--ff-body);
+  font-size:clamp(1rem,1.9vw,1.2rem);
+  font-weight:400;
+  color:rgba(255,255,255,.88);
+  max-width:52ch;
+  margin:18px auto 0;
+}
+
+/* ---------- Cuerpo ---------- */
+.main{
+  max-width:1120px;
+  margin:0 auto;
+  padding:64px 24px 80px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1fr);
+  gap:56px;
+  align-items:start;
+}
+
+/* Preview del PDF */
+.preview{
+  background:var(--white);
+  padding:22px;
+  border-radius:6px;
+  box-shadow:0 18px 46px rgba(30,30,30,.10);
+}
+.preview img{
+  width:100%;
+  border:1px solid var(--border);
+  border-radius:3px;
+}
+.preview-note{
+  margin-top:18px;
+  font-size:.875rem;
+  color:var(--grey);
+  line-height:1.5;
+}
+
+/* Formulario */
+.card{
+  background:var(--white);
+  padding:44px 44px 40px;
+  border-radius:6px;
+  box-shadow:0 18px 46px rgba(30,30,30,.10);
+}
+.card h2{
+  font-family:var(--ff-head);
+  font-size:1.45rem;
+  font-weight:500;
+  line-height:1.25;
+  margin-bottom:6px;
+}
+.card > p.intro{
+  color:var(--grey);
+  font-size:.94rem;
+  margin-bottom:28px;
+}
+
+.field{margin-bottom:20px}
+.field label{
+  display:block;
+  font-size:.9rem;
+  font-weight:600;
+  margin-bottom:8px;
+}
+.field label .req{color:var(--purple)}
+.field label .opt{
+  font-weight:400;
+  color:var(--grey);
+  font-size:.82rem;
+}
+.field input{
+  width:100%;
+  font-family:var(--ff-body);
+  font-size:1rem;
+  color:var(--black);
+  padding:14px 16px;
+  border:1px solid var(--border);
+  border-radius:4px;
+  background:var(--white);
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.field input::placeholder{color:#a8a5a5}
+.field input:focus{
+  outline:none;
+  border-color:var(--purple);
+  box-shadow:0 0 0 3px rgba(114,90,246,.16);
+}
+.field input:focus-visible{outline:none}
+.field.invalid input{border-color:var(--error)}
+.msg{
+  display:none;
+  font-size:.82rem;
+  color:var(--error);
+  margin-top:6px;
+}
+.field.invalid .msg{display:block}
+
+/* Honeypot antispam: invisible para personas, tentador para bots */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.btn{
+  width:100%;
+  font-family:var(--ff-body);
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:.01em;
+  color:var(--white);
+  background:var(--purple);
+  border:none;
+  border-radius:4px;
+  padding:17px 20px;
+  cursor:pointer;
+  margin-top:8px;
+  transition:background .2s ease, transform .12s ease;
+}
+.btn:hover{background:var(--purple-dark)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--purple-deep);outline-offset:2px}
+.btn[disabled]{background:#b6b0d6;cursor:not-allowed;transform:none}
+
+.legal{
+  font-size:.78rem;
+  color:var(--grey);
+  line-height:1.5;
+  margin-top:16px;
+}
+.legal a{color:var(--purple)}
+
+/* Estado de éxito */
+.done{display:none}
+.done.show{display:block}
+.form-wrap.hide{display:none}
+.done h2{
+  font-family:var(--ff-head);
+  font-size:1.45rem;
+  margin-bottom:10px;
+}
+.done p{color:var(--grey);font-size:.95rem;margin-bottom:22px}
+.done .btn{display:block;text-align:center;text-decoration:none;margin-top:0}
+.check{
+  width:46px;height:46px;
+  border-radius:50%;
+  background:var(--purple);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+}
+.check svg{width:22px;height:22px;stroke:#fff;stroke-width:3;fill:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr;gap:36px}
+  .preview{max-width:420px;margin:0 auto}
+  .main{padding:44px 20px 64px}
+  .card{padding:32px 24px 30px}
+  .banner{padding:52px 20px 56px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+}
+</style>
+</head>
+
+<body>
+
+<header class="banner">
+  <h1>5 herramientas para crear mejor contenido</h1>
+  <p>Apps que realmente te ayudan a ser un mejor creador y ahorrar tiempo.</p>
+</header>
+
+<main class="main">
+  <div class="grid">
+
+    <!-- ======== IZQUIERDA: preview del PDF ======== -->
+    <div class="preview">
+      <img src="assets/img/lead-magnet/preview.png"
+           alt="Vista previa de la guía 5 herramientas para crear mejor contenido"
+           width="800" height="1035">
+      <p class="preview-note">Guía en PDF · 5 herramientas · Descarga inmediata</p>
+    </div>
+
+    <!-- ======== DERECHA: formulario ======== -->
+    <div class="card">
+
+      <div class="form-wrap" id="formWrap">
+        <h2>Recibe la guía en tu correo</h2>
+        <p class="intro">Completa los datos y te enviamos el PDF al instante.</p>
+
+        <form id="leadForm" novalidate>
+
+          <div class="field" id="f-nombre">
+            <label for="nombre">Nombre o nombre de empresa <span class="req">*</span></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Overtone Lab"
+                   autocomplete="name" required>
+            <span class="msg">Escribe tu nombre para continuar.</span>
+          </div>
+
+          <div class="field" id="f-email">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com"
+                   autocomplete="email" inputmode="email" required>
+            <span class="msg">Revisa el correo, parece que falta algo.</span>
+          </div>
+
+          <div class="field" id="f-whatsapp">
+            <label for="whatsapp">WhatsApp <span class="opt">(opcional)</span></label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+57 300 000 0000"
+                   autocomplete="tel" inputmode="tel">
+            <span class="msg">Usa solo números, con el indicativo del país.</span>
+          </div>
+
+          <!-- honeypot -->
+          <div class="hp" aria-hidden="true">
+            <label for="empresa_web">No llenar</label>
+            <input type="text" id="empresa_web" name="empresa_web" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn" id="submitBtn">Descargar</button>
+
+          <p class="legal">
+            Al descargar aceptas recibir correos de Overtone Lab. Puedes darte de baja
+            cuando quieras.
+          </p>
+        </form>
+      </div>
+
+      <!-- Estado de éxito -->
+      <div class="done" id="done">
+        <div class="check" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polyline points="4 12.5 9.5 18 20 6.5"
+            stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h2>Listo, la descarga ya empezó</h2>
+        <p>También te la enviamos por correo. Si no llega en unos minutos, revisa la
+           carpeta de promociones o spam.</p>
+        <a class="btn" id="manualLink" href="#" download>Descargar de nuevo</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script>
+/* ==========================================================
+   CONFIGURACIÓN — cambia estas dos líneas y ya
+   ========================================================== */
+const WEBHOOK_URL  = "https://hook.us2.make.com/f6n4db8vpgpccm2qatbw4evvesau8emm";
+const PDF_URL      = "assets/pdf/5-herramientas-para-crear-mejor-contenido.pdf";
+/* ========================================================== */
+
+const form      = document.getElementById("leadForm");
+const btn       = document.getElementById("submitBtn");
+const formWrap  = document.getElementById("formWrap");
+const done      = document.getElementById("done");
+const manual    = document.getElementById("manualLink");
+
+const setError = (id, on) =>
+  document.getElementById(id).classList.toggle("invalid", on);
+
+// Quita el error en cuanto la persona corrige
+["nombre","email","whatsapp"].forEach(id => {
+  document.getElementById(id).addEventListener("input", () => setError("f-"+id, false));
+});
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const nombre   = form.nombre.value.trim();
+  const email    = form.email.value.trim();
+  const whatsapp = form.whatsapp.value.trim();
+
+  // Validación
+  let ok = true;
+  if (nombre.length < 2)                        { setError("f-nombre", true);   ok = false; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { setError("f-email", true); ok = false; }
+  if (whatsapp && !/^[+()\d\s-]{7,20}$/.test(whatsapp)) { setError("f-whatsapp", true); ok = false; }
+  if (!ok) { form.querySelector(".invalid input").focus(); return; }
+
+  // Bot detectado: fingimos éxito y no mandamos nada
+  if (form.empresa_web.value) { showSuccess(false); return; }
+
+  btn.disabled = true;
+  btn.textContent = "Enviando…";
+
+  const params = new URLSearchParams();
+  const url = new URL(window.location.href);
+  params.append("nombre", nombre);
+  params.append("email", email);
+  params.append("whatsapp", whatsapp);
+  params.append("lead_magnet", "5 herramientas para crear mejor contenido");
+  params.append("fecha", new Date().toISOString());
+  params.append("pagina", url.origin + url.pathname);
+  params.append("utm_source", url.searchParams.get("utm_source") || "");
+  params.append("utm_medium", url.searchParams.get("utm_medium") || "");
+  params.append("utm_campaign", url.searchParams.get("utm_campaign") || "");
+
+  try {
+    await fetch(WEBHOOK_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: params.toString()
+    });
+  } catch (err) {
+    // La descarga se entrega igual: no castigamos al usuario por un fallo de red
+    console.error("Webhook:", err);
+  }
+
+  showSuccess(true);
+});
+
+function showSuccess(download){
+  manual.href = PDF_URL;
+  formWrap.classList.add("hide");
+  done.classList.add("show");
+  done.scrollIntoView({ behavior: "smooth", block: "center" });
+  if (download) {
+    const a = document.createElement("a");
+    a.href = PDF_URL;
+    a.download = "";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+}
+</script>
+
+</body>
+</html>
