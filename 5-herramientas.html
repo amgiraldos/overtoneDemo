@@ -275,12 +275,13 @@ img{max-width:100%;display:block}
     <div class="card">
 
       <div class="form-wrap" id="formWrap">
-        <h2>Recibe la guía en tu correo</h2>
-        <p class="intro">Completa los datos y te enviamos el PDF al instante.</p>
+        <h2>Descarga la guía</h2>
+        <p class="intro">Completa los datos y el PDF se descarga al instante.</p>
 
         <form id="leadForm" novalidate>
 
           <div class="field" id="f-nombre">
+            <label for="nombre">Nombre o nombre de empresa <span class="req">*</span></label>
             <label for="nombre">Nombre o nombre de empresa <span class="req">*</span></label>
             <input type="text" id="nombre" name="nombre" placeholder="Overtone Lab"
                    autocomplete="name" required>
@@ -310,8 +311,8 @@ img{max-width:100%;display:block}
           <button type="submit" class="btn" id="submitBtn">Descargar</button>
 
           <p class="legal">
-            Al descargar aceptas recibir correos de Overtone Lab. Puedes darte de baja
-            cuando quieras.
+            Guardamos tus datos para enviarte novedades de Overtone Lab. Puedes pedir
+            que los borremos cuando quieras.
           </p>
         </form>
       </div>
@@ -322,10 +323,10 @@ img{max-width:100%;display:block}
           <svg viewBox="0 0 24 24"><polyline points="4 12.5 9.5 18 20 6.5"
             stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h2>Listo, la descarga ya empezó</h2>
-        <p>También te la enviamos por correo. Si no llega en unos minutos, revisa la
-           carpeta de promociones o spam.</p>
-        <a class="btn" id="manualLink" href="#" download>Descargar de nuevo</a>
+        <h2>Listo, tu descarga ya empezó</h2>
+        <p>Busca el archivo en la carpeta de descargas de tu dispositivo. Si no se
+           abrió sola, usa el botón.</p>
+        <a class="btn" id="manualLink" href="#" download>Descargar la guía</a>
       </div>
 
     </div>
@@ -337,7 +338,8 @@ img{max-width:100%;display:block}
    CONFIGURACIÓN — cambia estas dos líneas y ya
    ========================================================== */
 const WEBHOOK_URL  = "https://hook.us2.make.com/f6n4db8vpgpccm2qatbw4evvesau8emm";
-const PDF_URL      = "assets/pdf/Herramientas para crear mejor contenido";
+// Sin espacios ni tildes, y con la extensión .pdf al final
+const PDF_URL      = "assets/pdf/herramientas-para-crear-mejor-contenido.pdf";
 /* ========================================================== */
 
 const form      = document.getElementById("leadForm");
