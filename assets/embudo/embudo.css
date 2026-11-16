@@ -67,3 +67,16 @@ a{color:inherit}
 .prose p,.prose li{margin:0 0 12px}
 
 .vplay:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media (max-width:640px){
+.vgrid{grid-template-columns:1fr 1fr!important;gap:6px!important}
+.vgrid .vcard:nth-child(4){order:2}
+.vgrid .vcard:nth-child(3){order:3}
+.vgrid .vcard:nth-child(2){order:4}
+.vgrid .vcard{padding:8px!important;border-radius:16px!important}
+.vgrid .vcard>div:first-child{border-radius:12px!important}
+.vgrid .vcard .play{width:40px;height:40px}
+.vgrid .vh{margin:10px 0 2px!important;font-size:11px!important;white-space:nowrap}
+.vgrid .vb{font-size:22px!important}
+.vgrid .vu{display:block;margin-top:2px;font-size:13px!important}
+.vgrid .vm{margin:4px 0 0!important;font-size:11px!important;line-height:1.3}
+}
