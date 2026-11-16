@@ -65,3 +65,5 @@ a{color:inherit}
 .prose{font-size:17px;line-height:1.65;color:#3D3868}
 .prose h2{margin:36px 0 8px;font-weight:900;font-size:22px;color:#2A2659}
 .prose p,.prose li{margin:0 0 12px}
+
+.vplay:focus-visible{outline:3px solid #fff;outline-offset:3px}

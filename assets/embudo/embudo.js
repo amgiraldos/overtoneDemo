@@ -168,4 +168,32 @@
       vw.hidden = false; sub.hidden = false;
     }
   }
+
+  /* ---------- Videos de resultados (se reproducen dentro de la tarjeta) ---------- */
+  var plays = document.querySelectorAll('.vplay'), current = null;
+  var restore = function () {
+    if (!current) return;
+    current.el.innerHTML = current.html;
+    current.el.setAttribute('role', 'button'); current.el.setAttribute('tabindex', '0');
+    current.el.style.cursor = 'pointer'; current.el.style.background = '#7259F5';
+    current = null;
+  };
+  var playIn = function (el) {
+    if (current && current.el === el) return;
+    restore();
+    current = { el: el, html: el.innerHTML };
+    var f = document.createElement('iframe');
+    f.src = 'https://player.vimeo.com/video/' + encodeURIComponent(el.getAttribute('data-vimeo')) + '?autoplay=1&title=0&byline=0&portrait=0&dnt=1';
+    f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+    f.setAttribute('allowfullscreen', ''); f.title = el.getAttribute('aria-label') || 'Video';
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
+    el.innerHTML = ''; el.appendChild(f);
+    el.removeAttribute('role'); el.removeAttribute('tabindex');
+    el.style.cursor = 'auto'; el.style.background = '#000';
+  };
+  Array.prototype.forEach.call(plays, function (el) {
+    el.addEventListener('click', function () { playIn(el); });
+    el.addEventListener('keydown', function (ev) { if ((ev.key === 'Enter' || ev.key === ' ') && ev.target === el) { ev.preventDefault(); playIn(el); } });
+  });
 })();
