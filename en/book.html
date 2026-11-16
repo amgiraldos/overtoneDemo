@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book your call | Overtone Lab</title>
+<meta name="description" content="Monthly content plans for social media: strategy, scripts, filming, editing and posting. Visible pricing and limited spots. Overtone Lab, Medellín.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://overtonelab.com/en/book.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book your call | Overtone Lab">
+<meta property="og:description" content="Monthly content plans for social media: strategy, scripts, filming, editing and posting. Visible pricing and limited spots. Overtone Lab, Medellín.">
+<meta property="og:url" content="https://overtonelab.com/en/book.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Overtone Lab">
+<meta property="og:image" content="https://overtonelab.com/assets/embudo/img/og.png">
+<meta name="theme-color" content="#2A2659">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/embudo/embudo.css">
+
+</head>
+<body>
+<header style="background:#2A2659;color:#fff">
+<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px">
+<a href="index.html" aria-label="Overtone Lab" style="display:flex;align-items:center;min-height:44px"><img src="../assets/embudo/overtone-wordmark.png" alt="Overtone Lab" width="167" height="30" style="height:30px;width:auto;display:block"></a>
+<div class="lang" style="display:flex;gap:4px;background:#151029;border-radius:999px;padding:4px">
+<a class="off" href="../agendar.html" hreflang="es" lang="es" >ES</a><a class="on" href="#" hreflang="en" lang="en" aria-current="page">EN</a>
+</div></div></header>
+<main style="background:#DDD9FD;padding:56px 0 96px;min-height:900px"><div class="wrap" style="max-width:780px">
+<div id="book" data-thanks="thanks.html" style="background:#fff;border-radius:28px;padding:clamp(24px,5vw,48px)">
+<h1 class="h2" style="font-size:clamp(30px,4.4vw,48px);color:#2A2659">Book your call</h1>
+<p style="margin:12px 0 0;font-size:16px;font-weight:600;color:#3D3868">Discovery meeting · 30 min · Colombia time (GMT-5)</p>
+<p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#5546D9">We take calls on Wednesdays, from 8:00 AM to 12:00 PM and 1:00 PM to 6:00 PM.</p>
+<div style="margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:#DDD9FD;border-radius:16px;padding:14px 18px">
+<span style="font-weight:700;font-size:15px;line-height:1.4;color:#2A2659">Prefer immediate attention or meeting in person?</span>
+<a class="btn btn-n btn-s" href="https://api.whatsapp.com/send?phone=573024451526&text=Hi%21%20I%20need%20urgent%20help.%0A%0AMy%20name%3A%20%0AMy%20business%3A%20%0AMy%20social%20media%3A%20" target="_blank" rel="noopener">Message us on WhatsApp</a></div>
+<p id="demoNote" hidden style="margin:16px 0 0;padding:10px 14px;border-radius:12px;background:#FFF3CD;color:#7A5B00;font-weight:700;font-size:14px">TEST MODE: sample times. The real calendar is not connected yet.</p>
+
+<div id="step1">
+<p class="lb" style="margin-top:32px">Pick a Wednesday</p>
+<p id="slotStatus" style="margin:0;font-size:15px;color:#3D3868" hidden></p>
+<div id="dates" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+<p class="lb" id="timeLabel" hidden>Pick a time</p>
+<div id="times" style="display:flex;flex-wrap:wrap;gap:10px" hidden></div>
+<button type="button" id="next" class="btn btn-n btn-off" style="margin-top:28px">Continue</button>
+</div>
+
+<div id="step2" hidden>
+<div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#DDD9FD;border-radius:16px;padding:12px 16px">
+<span id="summary" style="font-weight:800;color:#2A2659"></span><button type="button" id="backBtn" class="chip">Change time</button></div>
+<h2 style="margin:36px 0 0;font-weight:900;font-size:26px;color:#2A2659">Your details</h2>
+<label class="lb" for="f-name">Full name <span class="req">*</span></label><input id="f-name" class="in" type="text" autocomplete="name">
+<label class="lb" for="f-social">Links to your social media (Instagram, TikTok) <span class="req">*</span></label><textarea id="f-social" class="in" rows="2"></textarea>
+<label class="lb" for="f-biz">Tell us about your business: what you sell and what your offer is <span class="req">*</span></label><textarea id="f-biz" class="in" rows="3"></textarea>
+<p class="lb">How soon are you looking to start? (optional)</p><div id="soonBox" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+<p class="lb">What would be the best result of joining our program in the next 90 days? <span class="req">*</span></p><div id="goalBox" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+<p class="lb">If you found a guaranteed way to get that result, how much would you be willing to invest per month? <span class="req">*</span></p><div id="budgetBox" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+<p style="margin:8px 0 0;font-size:14px;color:#3D3868">Amounts in US dollars (USD).</p>
+<label class="lb" for="f-phone">WhatsApp <span class="req">*</span></label><input id="f-phone" class="in" type="tel" autocomplete="tel">
+<label class="lb" for="f-email">Email <span class="req">*</span></label><input id="f-email" class="in" type="email" autocomplete="email">
+<label class="lb" for="f-ref">Who referred you? (optional)</label><input id="f-ref" class="in" type="text">
+<div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" type="text" tabindex="-1" autocomplete="off"></div>
+<div style="display:flex;gap:12px;align-items:flex-start;margin-top:28px"><input id="f-consent" type="checkbox" style="width:24px;height:24px;margin:2px 0 0;flex:none;accent-color:#5546D9">
+<label for="f-consent" style="font-size:15px;line-height:1.5;color:#3D3868">I authorize the processing of my data so you can contact me about this service. <a href="privacy.html" target="_blank" rel="noopener" style="color:#5546D9">Privacy policy</a> <span class="req">*</span></label></div>
+<p id="err" role="alert" hidden style="margin:20px 0 0;font-weight:700;font-size:15px;color:#B3261E"></p>
+<button type="button" id="submit" class="btn btn-n" style="margin-top:28px;width:100%">Book call</button>
+</div></div></div></main>
+<footer style="background:#151029;color:#fff;padding:40px 0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:14px">
+<p style="margin:0;font-weight:800;font-size:22px">Have questions? Contact us</p>
+<div style="display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:16px">
+<a href="https://api.whatsapp.com/send?phone=573024451526&text=Hola%21%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20planes%20mensuales%20de%20marketing%20de%20contenido" target="_blank" rel="noopener" style="text-decoration:none">+57 302 445 1526</a>
+<a href="mailto:contacto@overtonelab.com" style="text-decoration:none">contacto@overtonelab.com</a>
+<a href="privacy.html" style="text-decoration:none;color:#CDC5FD;font-size:14px;margin-top:8px">Privacy policy</a>
+</div></div></footer>
+<script src="../assets/embudo/config.js"></script>
+<script>window.OT_I18N={"loading": "Loading times…", "noSlots": "No times available right now. Message us on WhatsApp and we will help you.", "goals": ["Get more clients", "Sell a product or service", "Become an authority", "More brand reach"], "budgets": ["Under $600", "$600 – $1,200", "$1,200 – $1,900", "$1,900 – $3,200", "Over $3,200"], "missName": "Full name", "missSocial": "Links to your social media", "missBiz": "Your business", "missGoal": "Best result in 90 days", "missBudget": "Monthly investment", "missPhone": "WhatsApp", "missEmail": "Email", "missConsent": "Data authorization", "errMissing": "Still missing: ", "errServer": "We could not book your call. Please try again or message us on WhatsApp.", "errTaken": "That time was just taken. Please pick another one.", "sending": "Booking…", "submit": "Book call", "thanksTitleN": "Thank you, {n}! Your call is booked", "soons": ["This month", "Within 60 days, still exploring", "No set timeline"]};</script>
+<script src="../assets/embudo/embudo.js" defer></script>
+</body>
+</html>

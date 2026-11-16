@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agenda tu llamada | Overtone Lab</title>
+<meta name="description" content="Planes mensuales de contenido para redes sociales: estrategia, guiones, grabación, edición y publicación. Precios visibles y cupos limitados. Overtone Lab, Medellín.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://overtonelab.com/agendar.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agenda tu llamada | Overtone Lab">
+<meta property="og:description" content="Planes mensuales de contenido para redes sociales: estrategia, guiones, grabación, edición y publicación. Precios visibles y cupos limitados. Overtone Lab, Medellín.">
+<meta property="og:url" content="https://overtonelab.com/agendar.html">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Overtone Lab">
+<meta property="og:image" content="https://overtonelab.com/assets/embudo/img/og.png">
+<meta name="theme-color" content="#2A2659">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/embudo/embudo.css">
+
+</head>
+<body>
+<header style="background:#2A2659;color:#fff">
+<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px">
+<a href="index.html" aria-label="Overtone Lab" style="display:flex;align-items:center;min-height:44px"><img src="assets/embudo/overtone-wordmark.png" alt="Overtone Lab" width="167" height="30" style="height:30px;width:auto;display:block"></a>
+<div class="lang" style="display:flex;gap:4px;background:#151029;border-radius:999px;padding:4px">
+<a class="on" href="#" hreflang="es" lang="es" aria-current="page">ES</a><a class="off" href="en/book.html" hreflang="en" lang="en" >EN</a>
+</div></div></header>
+<main style="background:#DDD9FD;padding:56px 0 96px;min-height:900px"><div class="wrap" style="max-width:780px">
+<div id="book" data-thanks="gracias.html" style="background:#fff;border-radius:28px;padding:clamp(24px,5vw,48px)">
+<h1 class="h2" style="font-size:clamp(30px,4.4vw,48px);color:#2A2659">Agenda tu llamada</h1>
+<p style="margin:12px 0 0;font-size:16px;font-weight:600;color:#3D3868">Reunión de descubrimiento · 30 min · Hora de Colombia (GMT-5)</p>
+<p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#5546D9">Atendemos llamadas los miércoles, de 8:00 a 12:00 y de 13:00 a 18:00.</p>
+<div style="margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:#DDD9FD;border-radius:16px;padding:14px 18px">
+<span style="font-weight:700;font-size:15px;line-height:1.4;color:#2A2659">¿Prefieres atención inmediata o vernos en persona?</span>
+<a class="btn btn-n btn-s" href="https://api.whatsapp.com/send?phone=573024451526&text=Hola%21%20Quiero%20ayuda%20urgente.%0A%0AMi%20nombre%3A%20%0AMi%20negocio%3A%20%0AMis%20redes%3A%20" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></div>
+<p id="demoNote" hidden style="margin:16px 0 0;padding:10px 14px;border-radius:12px;background:#FFF3CD;color:#7A5B00;font-weight:700;font-size:14px">MODO DE PRUEBA: horarios de ejemplo. El calendario real aún no está conectado.</p>
+
+<div id="step1">
+<p class="lb" style="margin-top:32px">Elige un miércoles</p>
+<p id="slotStatus" style="margin:0;font-size:15px;color:#3D3868" hidden></p>
+<div id="dates" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+<p class="lb" id="timeLabel" hidden>Elige una hora</p>
+<div id="times" style="display:flex;flex-wrap:wrap;gap:10px" hidden></div>
+<button type="button" id="next" class="btn btn-n btn-off" style="margin-top:28px">Continuar</button>
+</div>
+
+<div id="step2" hidden>
+<div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#DDD9FD;border-radius:16px;padding:12px 16px">
+<span id="summary" style="font-weight:800;color:#2A2659"></span><button type="button" id="backBtn" class="chip">Cambiar hora</button></div>
+<h2 style="margin:36px 0 0;font-weight:900;font-size:26px;color:#2A2659">Tus datos</h2>
+<label class="lb" for="f-name">Nombre completo <span class="req">*</span></label><input id="f-name" class="in" type="text" autocomplete="name">
+<label class="lb" for="f-social">Enlaces a tus redes (Instagram, TikTok) <span class="req">*</span></label><textarea id="f-social" class="in" rows="2"></textarea>
+<label class="lb" for="f-biz">Cuéntanos de tu negocio: qué vendes y cuál es tu oferta <span class="req">*</span></label><textarea id="f-biz" class="in" rows="3"></textarea>
+<p class="lb">¿Qué tan pronto quieres empezar? (opcional)</p><div id="soonBox" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+<p class="lb">¿Cuál sería el mejor resultado al entrar a nuestro programa en los próximos 90 días? <span class="req">*</span></p><div id="goalBox" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+<p class="lb">Si encontraras una forma garantizada de lograr ese resultado ¿Cuánto estarías dispuesto a invertir al mes? <span class="req">*</span></p><div id="budgetBox" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+<p style="margin:8px 0 0;font-size:14px;color:#3D3868">Valores en pesos colombianos (COP).</p>
+<label class="lb" for="f-phone">WhatsApp <span class="req">*</span></label><input id="f-phone" class="in" type="tel" autocomplete="tel">
+<label class="lb" for="f-email">Correo <span class="req">*</span></label><input id="f-email" class="in" type="email" autocomplete="email">
+<label class="lb" for="f-ref">¿Quién te refirió? (opcional)</label><input id="f-ref" class="in" type="text">
+<div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" type="text" tabindex="-1" autocomplete="off"></div>
+<div style="display:flex;gap:12px;align-items:flex-start;margin-top:28px"><input id="f-consent" type="checkbox" style="width:24px;height:24px;margin:2px 0 0;flex:none;accent-color:#5546D9">
+<label for="f-consent" style="font-size:15px;line-height:1.5;color:#3D3868">Autorizo el tratamiento de mis datos para contactarme sobre este servicio. <a href="privacidad.html" target="_blank" rel="noopener" style="color:#5546D9">Política de privacidad</a> <span class="req">*</span></label></div>
+<p id="err" role="alert" hidden style="margin:20px 0 0;font-weight:700;font-size:15px;color:#B3261E"></p>
+<button type="button" id="submit" class="btn btn-n" style="margin-top:28px;width:100%">Agendar llamada</button>
+</div></div></div></main>
+<footer style="background:#151029;color:#fff;padding:40px 0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:14px">
+<p style="margin:0;font-weight:800;font-size:22px">¿Tienes preguntas? Contáctanos</p>
+<div style="display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:16px">
+<a href="https://api.whatsapp.com/send?phone=573024451526&text=Hola%21%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20planes%20mensuales%20de%20marketing%20de%20contenido" target="_blank" rel="noopener" style="text-decoration:none">+57 302 445 1526</a>
+<a href="mailto:contacto@overtonelab.com" style="text-decoration:none">contacto@overtonelab.com</a>
+<a href="privacidad.html" style="text-decoration:none;color:#CDC5FD;font-size:14px;margin-top:8px">Política de privacidad</a>
+</div></div></footer>
+<script src="assets/embudo/config.js"></script>
+<script>window.OT_I18N={"loading": "Cargando horarios…", "noSlots": "No hay horarios disponibles en este momento. Escríbenos por WhatsApp y te ayudamos.", "goals": ["Conseguir más clientes", "Vender un producto o servicio", "Posicionarme como autoridad", "Más alcance de marca"], "budgets": ["Menos de $2M", "$2M – $3,8M", "$3,8M – $6M", "$6M – $10M", "Más de $10M"], "missName": "Nombre completo", "missSocial": "Enlaces a tus redes", "missBiz": "Tu negocio", "missGoal": "Mejor resultado en 90 días", "missBudget": "Inversión al mes", "missPhone": "WhatsApp", "missEmail": "Correo", "missConsent": "Autorización de datos", "errMissing": "Falta completar: ", "errServer": "No pudimos agendar tu llamada. Intenta de nuevo o escríbenos por WhatsApp.", "errTaken": "Ese horario ya fue tomado. Elige otro, por favor.", "sending": "Agendando…", "submit": "Agendar llamada", "thanksTitleN": "¡Gracias, {n}! Tu llamada esta agendada", "soons": ["Este mes", "En 60 días, aún explorando", "Sin fecha definida"]};</script>
+<script src="assets/embudo/embudo.js" defer></script>
+</body>
+</html>
