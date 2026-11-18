@@ -188,7 +188,7 @@ def jsonld(L, T):
     for p in PLANS:
         price = _num(p['cop'] if L == 'es' else p['usd'])
         desc = ('%d videos cortos y %d historias al mes' % (p['shorts'], p['stories'])) if L == 'es' else ('%d short videos and %d stories per month' % (p['shorts'], p['stories']))
-        offers.append({"@type": "Offer", "priceSpecification": {"@type": "UnitPriceSpecification", "price": price, "priceCurrency": cur, "unitCode": "MON", "unitText": "month"},
+        offers.append({"@type": "Offer", "priceSpecification": {"@type": "UnitPriceSpecification", "price": price, "priceCurrency": cur, "unitCode": "MON", "unitText": "month", "valueAddedTaxIncluded": False},
                        "itemOffered": {"@type": "Service", "name": "%s %s" % (plan_word, p['name'].title()), "description": desc + '. ' + ', '.join([T['filmDays2'] if (p.get('days', 1) == 2 and i == 3) else f for i, f in enumerate(T['feat'][:8])]) + '.',
                                        "provider": {"@id": org_id}, "areaServed": "Medellín, Colombia"}})
     graph = [
