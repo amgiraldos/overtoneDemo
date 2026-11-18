@@ -132,7 +132,8 @@ def plans_html(L, T):
         box = 'position:relative;display:flex;flex-direction:column;border-radius:28px;padding:32px 28px;' + ('background:#fff;color:#2A2659;z-index:1;box-shadow:0 0 0 4px #DDD9FD,0 24px 70px rgba(255,255,255,.45)' if best else 'background:#2A2659;color:#fff')
         chk = 'flex:none;font-weight:900;color:' + ('#5546D9' if best else '#CDC5FD')
         badge = '<span style="position:absolute;top:-16px;left:28px;background:#2A2659;color:#fff;font-weight:900;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;border-radius:999px">%s</span>' % e(T['best']) if best else ''
-        feats = ''.join('<div style="display:flex;gap:10px"><span aria-hidden="true" style="%s">–</span><span>%s</span></div>' % (chk, e(f)) for f in T['feat'][:8])
+        flist = [T['filmDays2'] if (p.get('days', 1) == 2 and i == 3) else f for i, f in enumerate(T['feat'][:8])]
+        feats = ''.join('<div style="display:flex;gap:10px"><span aria-hidden="true" style="%s">–</span><span>%s</span></div>' % (chk, e(f)) for f in flist)
         feats += '<div style="display:flex;gap:10px"><span aria-hidden="true" style="%s">★</span><span style="font-weight:900">%s</span></div>' % (chk, e(T['feat'][8]))
         out.append('''<div class="%s" style="%s">%s
 <p style="margin:0;font-weight:900;font-size:15px;letter-spacing:.14em">%s</p>
@@ -188,7 +189,7 @@ def jsonld(L, T):
         price = _num(p['cop'] if L == 'es' else p['usd'])
         desc = ('%d videos cortos y %d historias al mes' % (p['shorts'], p['stories'])) if L == 'es' else ('%d short videos and %d stories per month' % (p['shorts'], p['stories']))
         offers.append({"@type": "Offer", "priceSpecification": {"@type": "UnitPriceSpecification", "price": price, "priceCurrency": cur, "unitCode": "MON", "unitText": "month"},
-                       "itemOffered": {"@type": "Service", "name": "%s %s" % (plan_word, p['name'].title()), "description": desc + '. ' + ', '.join(T['feat'][:8]) + '.',
+                       "itemOffered": {"@type": "Service", "name": "%s %s" % (plan_word, p['name'].title()), "description": desc + '. ' + ', '.join([T['filmDays2'] if (p.get('days', 1) == 2 and i == 3) else f for i, f in enumerate(T['feat'][:8])]) + '.',
                                        "provider": {"@id": org_id}, "areaServed": "Medellín, Colombia"}})
     graph = [
         {"@type": "ProfessionalService", "@id": org_id, "name": "Overtone Lab", "alternateName": "Overtone Lab Medellín", "url": SITE + '/',

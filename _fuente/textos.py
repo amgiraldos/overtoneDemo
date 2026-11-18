@@ -51,7 +51,7 @@ ES = {
  'faqTitle': 'Preguntas frecuentes',
  'faq': [
   {'q': 'Ya tengo demasiado trabajo ¿Qué tanto tiempo tengo que invertir?',
-   'seg': [('Tú te dedicas a tu negocio, nosotros seremos tu equipo de contenido.\n\n', 0), ('Tus responsabilidades:', 1), ('\n• Solo te toma 1 día al mes para grabar\n• Una llamada mensual de análisis\n• Aprobaciones rápidas, para que sigamos tu estilo\n\n', 0), ('La mayoría de clientes llegan diciendo:', 1), (' “Sé que las redes son importantes, pero llevando el negocio no me queda tiempo ni energía”. ', 0), ('Esa es la razón exacta por la que construimos este sistema.', 1)]},
+   'seg': [('Tú te dedicas a tu negocio, nosotros seremos tu equipo de contenido.\n\n', 0), ('Tus responsabilidades:', 1), ('\n• Solo te toma 1 día al mes para grabar (2 días en el plan Elite)\n• Una llamada mensual de análisis\n• Aprobaciones rápidas, para que sigamos tu estilo\n\n', 0), ('La mayoría de clientes llegan diciendo:', 1), (' “Sé que las redes son importantes, pero llevando el negocio no me queda tiempo ni energía”. ', 0), ('Esa es la razón exacta por la que construimos este sistema.', 1)]},
   {'q': 'Ya intenté subir contenido y no funcionó ¿Por qué esto sería diferente?',
    'seg': [('No eres malo creando contenido, es que nadie te ha explicado cómo hacerlo.\n\n', 0), ('La mayoría de nuestros clientes han pasado por:', 1), ('\n• Mucho esfuerzo y pocos resultados\n• Cansados de intentar ser constantes\n• No saben qué funciona y qué no\n\n', 0), ('Lo que hacemos diferente:', 1), ('\n• Investigamos lo que ya da resultados en tu nicho y lo adaptamos a tu negocio\n• Cada mes analizamos cómo lo recibió tu audiencia, para seguir creando lo que más conecta\n• Encontramos tu formato ganador: el tipo de video que siempre funciona en tu cuenta\n• Lo repetimos a propósito: mismos ángulos y temas, en versiones diferentes', 0)]},
   {'q': '¿Esto sirve para mi negocio?',
@@ -66,6 +66,7 @@ ES = {
  'stories': 'historias enfocadas en ventas',
  'videos': 'videos cortos al mes',
  'includes': 'Incluye',
+ 'filmDays2': '2 días de grabación al mes',
  'feat': ['Llamada de inicio y análisis mensual', 'Investigación', 'Guiones', 'Día de grabación', 'Edición', 'Publicación', 'Automatizaciones', 'Reportes mensuales', 'BONO: Guía para optimizar tu perfil'],
  'planNote': 'Pago del 100% al inicio de cada mes · Mínimo 3 meses · Cupos limitados',
  'customTitle': '¿Necesitas más volumen?',
@@ -180,7 +181,7 @@ EN = {
  'faqTitle': 'Frequently asked questions',
  'faq': [
   {'q': 'I already have too much on my plate. How much time do I have to invest?',
-   'seg': [('You focus on your business, we will be your content team.\n\n', 0), ('Your responsibilities:', 1), ('\n• It only takes 1 day a month to film\n• One monthly analysis call\n• Quick approvals, so we keep your style\n\n', 0), ('Most clients come to us saying:', 1), (' “I know social media matters, but running the business leaves me no time or energy.” ', 0), ('That is exactly why we built this system.', 1)]},
+   'seg': [('You focus on your business, we will be your content team.\n\n', 0), ('Your responsibilities:', 1), ('\n• It only takes 1 day a month to film (2 days on the Elite plan)\n• One monthly analysis call\n• Quick approvals, so we keep your style\n\n', 0), ('Most clients come to us saying:', 1), (' “I know social media matters, but running the business leaves me no time or energy.” ', 0), ('That is exactly why we built this system.', 1)]},
   {'q': 'I already tried posting content and it did not work. Why would this be different?',
    'seg': [('You are not bad at creating content. Nobody has ever explained how to do it.\n\n', 0), ('Most of our clients have been through:', 1), ('\n• Lots of effort and few results\n• Being tired of trying to stay consistent\n• Not knowing what works and what does not\n\n', 0), ('What we do differently:', 1), ('\n• We research what already gets results in your niche and adapt it to your business\n• Each month we analyze how your audience received it, to keep creating what connects most\n• We find your winning format: the type of video that always works on your account\n• We repeat it on purpose: same angles, same topics, in different versions', 0)]},
   {'q': 'Will this work for my business?',
@@ -195,6 +196,7 @@ EN = {
  'stories': 'sales-focused stories',
  'videos': 'short videos a month',
  'includes': 'Includes',
+ 'filmDays2': '2 filming days per month',
  'feat': ['Kickoff call and monthly review', 'Research', 'Scripts', 'Filming day', 'Editing', 'Posting', 'Automations', 'Monthly reports', 'BONUS: Profile optimization guide'],
  'planNote': '100% paid at the start of each month · 3-month minimum · Limited spots',
  'customTitle': 'Need more volume?',
@@ -256,9 +258,9 @@ EN = {
 }
 
 PLANS = [
- {'name': 'STARTER', 'cop': '$3.800.000', 'usd': '$1,200', 'shorts': 8, 'stories': 3, 'best': False},
- {'name': 'OVERTONE', 'cop': '$6.000.000', 'usd': '$1,900', 'shorts': 16, 'stories': 7, 'best': True},
- {'name': 'ELITE', 'cop': '$7.200.000', 'usd': '$2,300', 'shorts': 20, 'stories': 12, 'best': False},
+ {'name': 'STARTER', 'cop': '$3.800.000', 'usd': '$1,200', 'shorts': 8, 'stories': 3, 'days': 1, 'best': False},
+ {'name': 'OVERTONE', 'cop': '$6.000.000', 'usd': '$1,900', 'shorts': 16, 'stories': 7, 'days': 1, 'best': True},
+ {'name': 'ELITE', 'cop': '$7.200.000', 'usd': '$2,300', 'shorts': 20, 'stories': 12, 'days': 2, 'best': False},
 ]
 
 # (nombre, archivo)
