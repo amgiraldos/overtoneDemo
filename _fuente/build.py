@@ -56,8 +56,9 @@ def head(L, T, page, title, desc, robots=None, extra=''):
     h += ['<meta property="og:type" content="website">', '<meta property="og:title" content="%s">' % e(title),
           '<meta property="og:description" content="%s">' % e(desc), '<meta property="og:url" content="%s">' % can,
           '<meta property="og:locale" content="%s">' % T['ogLocale'], '<meta property="og:site_name" content="Overtone Lab">',
-          '<meta property="og:image" content="%s/assets/embudo/img/og.png">' % SITE,
-          '<meta property="og:image:alt" content="Overtone Lab">',
+          '<meta property="og:image" content="%s/assets/embudo/img/%s">' % (SITE, 'og-v2-en.png' if L=='en' else 'og-v2.png'),
+          '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
+          '<meta property="og:image:alt" content="%s">' % ('Overtone Lab: social media content in Medellín' if L=='en' else 'Overtone Lab: contenido para redes sociales en Medellín'),
           '<meta name="twitter:card" content="summary_large_image">',
           '<meta name="theme-color" content="#2A2659">',
           '<link rel="icon" href="/favicon.ico" sizes="any">',
@@ -193,7 +194,7 @@ def jsonld(L, T):
                                        "provider": {"@id": org_id}, "areaServed": "Medellín, Colombia"}})
     graph = [
         {"@type": "ProfessionalService", "@id": org_id, "name": "Overtone Lab", "alternateName": "Overtone Lab Medellín", "url": SITE + '/',
-         "logo": SITE + "/assets/embudo/img/icon-192.png", "image": SITE + "/assets/embudo/img/og.png",
+         "logo": SITE + "/assets/embudo/img/icon-192.png", "image": SITE + "/assets/embudo/img/og-v2.png",
          "description": T['desc'], "email": "contacto@overtonelab.com", "telephone": "+573024451526",
          "address": {"@type": "PostalAddress", "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO"},
          "areaServed": [{"@type": "City", "name": "Medellín"}, {"@type": "Country", "name": "Colombia"}, {"@type": "Country", "name": "United States"}],
